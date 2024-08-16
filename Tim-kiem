@@ -1,1 +1,20 @@
+#include <iostream>
+using namespace std;
 
+#define MAX 100
+
+int Search(int a[],int n, int X) {
+    int i = 0;
+    while(i < n && a[i] != X) {
+        i++;
+    if(i < n) 
+        return i; 
+    }
+    return -1;
+}
+
+int main() {
+    int a[MAX];
+    int n;
+    Search(a,n,30);
+}
