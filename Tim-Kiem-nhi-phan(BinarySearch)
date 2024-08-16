@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+#define MAX 100
+
+int BinarySearch(int a[], int n, int X) {
+    int left = 0, right = n - 1, mid;
+    while(left <= right) {
+        mid = (left + right)/2;
+        if(a[mid] == X) {
+            return mid;
+        }
+        if(X < a[mid]) {
+            left = mid + 1;
+        }
+        else {
+            right = mid -1;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int a[MAX];
+    int n;
+    BinarySearch(a,n,X);
+}
